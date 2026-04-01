@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Smart Task Scheduler</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+    <div class="ambient ambient-three"></div>
+
+    <header class="hero">
+      <h1>Smart Task Scheduler</h1>
+      <p>Optimize your study time using intelligent scheduling</p>
+    </header>
+
+    <main class="dashboard-grid">
+      <section class="glass-card input-panel">
+        <div class="section-heading">
+          <h2>Build Your Study Window</h2>
+          <p>Set your available hours, add tasks, and let the scheduler organize the day.</p>
+        </div>
+
+        <div class="time-grid">
+          <label class="field">
+            <span><span class="icon">🕒</span> Start Time</span>
+            <input type="time" id="startTime" value="08:00">
+          </label>
+          <label class="field">
+            <span><span class="icon">⏱</span> End Time</span>
+            <input type="time" id="endTime" value="18:00">
+          </label>
+        </div>
+
+        <div class="task-form">
+          <label class="field">
+            <span><span class="icon">✦</span> Task Name</span>
+            <input type="text" id="taskName" placeholder="e.g. Revise Data Structures">
+          </label>
+          <div class="task-form-row">
+            <label class="field">
+              <span><span class="icon">⚑</span> Priority</span>
+              <select id="taskPriority">
+                <option value="High">High</option>
+                <option value="Medium" selected>Medium</option>
+                <option value="Low">Low</option>
+              </select>
+            </label>
+            <label class="field">
+              <span><span class="icon">◆</span> Difficulty</span>
+              <select id="taskDifficulty">
+                <option value="Easy">Easy</option>
+                <option value="Medium" selected>Medium</option>
+                <option value="Hard">Hard</option>
+              </select>
+            </label>
+          </div>
+          <p class="helper-text">AI will automatically distribute your available time based on task priority and difficulty.</p>
+          <button class="add-task-btn" id="addTaskBtn" type="button">+ Add Task</button>
+        </div>
+
+        <div class="task-list-wrap">
+          <div class="subsection-title">
+            <h3>Added Tasks</h3>
+            <span id="taskCount">3 tasks</span>
+          </div>
+          <ul class="task-list" id="taskList"></ul>
+        </div>
+      </section>
+
+      <section class="output-column">
+        <div class="glass-card action-card">
+          <div class="section-heading compact">
+            <h2>Generate Schedule</h2>
+            <p>Generate your optimized schedule</p>
+          </div>
+          <button class="generate-btn" id="generateBtn" type="button">Generate Optimal Schedule</button>
+        </div>
+
+        <section class="glass-card output-panel">
+          <div class="section-heading">
+            <h2>Optimal Schedule</h2>
+            <p class="total-time-display" id="totalTimeDisplay"></p>
+          </div>
+          <ol class="schedule-list" id="scheduleList"></ol>
+        </section>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
