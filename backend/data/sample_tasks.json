@@ -1,0 +1,23 @@
+[
+  {
+    "name": "DBMS",
+    "duration": 2,
+    "priority": "high",
+    "difficulty": "hard",
+    "deadline": 1
+  },
+  {
+    "name": "Java",
+    "duration": 1,
+    "priority": "medium",
+    "difficulty": "medium",
+    "deadline": 3
+  },
+  {
+    "name": "Math",
+    "duration": 1,
+    "priority": "low",
+    "difficulty": "easy",
+    "deadline": 5
+  }
+]
